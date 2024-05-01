@@ -1,0 +1,177 @@
+\documentclass[11pt,a3]{article}
+
+\usepackage[letterpaper, portrait, margin=0.6cm]{geometry}	% To set Page Margin
+\usepackage{setspace}										% To use vspace
+\usepackage{tabu}											% To create personal details table
+\usepackage{multirow}										% To merge cells in table
+\usepackage{color}											% To change font color
+\usepackage{hyphenat}										% To remove hyphenation
+\usepackage[hidelinks]{hyperref}							% To insert hyperlink for mail ID
+\usepackage{textcomp}										% To display Celsius symbol 
+\usepackage{enumitem}										% To create list
+\usepackage{tabto}											% To use \tab
+\usepackage{gensymb}										% Degree symbol
+
+\renewcommand{\labelitemi}{\textendash}						% Change the bullet type
+
+\def\hrulefill{\leavevmode\leaders\hrule height 1pt\hfill\kern 0pt}		% To change default thickness of \hrulefill
+
+%\usepackage{fontspec}
+%\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+%\setmainfont{Times}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\setlist{nosep}												% To remove space between list items
+
+
+
+\begin{document}
+{\fontfamily{ptm}\selectfont	
+	\renewcommand{\familydefault}{\sfdefault}
+	\pagenumbering{gobble}									% To remove page number
+
+% ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+% Personal Details
+	\noindent
+	\begin{tabu} to \textwidth {X[l] X[c] X[r]}
+		1424 S Jentilly Ln  &  \multirow{2}{*}{{ \textbf{Narain Pattabhiraman}}}  &  +1 (480) 942-7568 		\\
+		Tempe, AZ 85281 &	&   \textcolor{blue} {\href{mailto:npattab1@asu.edu}{npattab1@asu.edu}}	\\
+		\multicolumn{3}{c}{\textcolor{blue}{\url {        https://www.linkedin.com/in/narainp}}}  \\
+        \multicolumn{3}{c}{\textcolor{blue}{\url {        https://github.com/narain1}}} 
+	\end{tabu}
+
+	
+	%\centering	\\
+
+	\vspace{-2mm}
+
+% ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+% Objective
+%	\begin{flushleft}
+%		\rule{0.5 cm}{1pt} {\Large Summary} %\hrulefill	\\
+		
+%		\vspace{0.5mm}
+		
+%		   Recent Industrial engineering graduate specializing in statistical analysis, process improvement and supply chain management with CPIM certification skilled at designing and planning of supply chain network, managing and optimizing inventory and improving manufacturing and supply chain processes.
+		
+%		\vspace{-2mm}
+%		\centering\hrulefill
+%		\vspace{-2mm}
+%	\end{flushleft}
+	
+% ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+% Education
+	\begin{flushleft}
+	%	\rule{0.5 cm}{1pt}
+	{\Large \textbf{EDUCATION}} %\hrulefill	\\
+		
+		\vspace{1.5mm}
+
+	\textbf{\large Arizona State University}, \large United States \tab {\textit{\large GPA: 3.78}} \hfill \textit{\large Aug '23 - May '25*}	\\
+		\rule{0.5 cm}\textit{\large M.S., Computer Engineering, Computer Systems}	\\
+		
+
+
+		\vspace{1mm}
+
+		
+		\textbf{\large Amrita Vishwa Vidyapeetham}, \large India \tab {\textit{\large GPA: 3.10}} \hfill \textit{\large Jul '16 - Jun '20}	\\
+		\rule{0.5 cm}\textit{\large B.Tech., Mechanical Engineering}
+
+		
+%		\vspace{-2mm}
+%		\centering\hrulefill
+%		\vspace{-2mm}
+	\end{flushleft}
+
+% ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+
+	
+
+	\begin{flushleft}
+		%\rule{0.5cm}{1pt} 
+    {\Large \textbf {SKILLS AND CERTIFICATIONS}}
+    
+        \vspace{1.5mm}
+        \textbf{Programming Languages:} Python, C++, C, SQL, UNIX, CUDA \\
+        \textbf{Machine Learning and Data Science:} Deep Learning, MLOps, Predictive Modeling   \\
+        \textbf{Cloud Technologies and Tools:} AWS, Docker, DevOps, Git/GitHub \\
+        \textbf{Relevant Coursework and Certifications:} Embedded Machine Learning, Digital Image Processing, Machine Learning Systems \\
+        % \textbf{Soft Skills:} Problem Solving, Critical Thinking, Communication, Teamwork and Leadership
+
+    \end{flushleft}
+		
+		
+		
+% Work Experience
+	\begin{flushleft}
+	%	\rule{0.5cm}{1pt} 
+		{\Large \textbf{WORK EXPERIENCE}} %\hrulefill \\
+  
+        \vspace{1.5mm}
+        \textbf{\large MLOps \& AI Development Engr (Student Worker), ASU Enterprise Technology},  \large Phoenix, United States \hfill \textit{\large Jan '24}	\\
+		\begin{itemize}
+            \item Engineered and optimized Low-Latency Models (LLMs) and Retrieval Augmented Generation (RAG) systems to enhance deployment efficiency and computational performance using AWS cloud services including Lambda, Step Functions, and SageMaker.
+            \item Researched and Developed vector databases and data engineering pipelines for scalable data retrieval and question answering tools, utilizing ASU’s private documents to improve accessibility and support decision-making in administrative and academic functions.
+            \item Implemented robust, scalable solutions for machine learning model deployments and maintenance, reducing operational delays and improving system reliability and query precision.
+        \end{itemize}	
+        \vspace{0.5mm}
+        \textbf{\large Software Engineer, Fidelity Investments},  \large Chennai, India \hfill \textit{\large Apr '22 - Jul '23}	\\
+		\begin{itemize}
+            \item Designed and ;implemented end-to-end scalable deployment workflows for machine learning models on the AWS cloud platform.  
+             \item Developed a low-latency feature store for online feature retrieval, achieving a 500x reduction in latency and substantially increasing throughput.
+             \item Crafted and executed deployment pipelines for Low-Latency Models on AWS EC2, utilizing quantized training methods to optimize performance and cost-efficiency. 
+		\end{itemize}	
+  
+		\textbf{\large AI Researcher, QPiAI }, \large Bangalore, India \hfill \textit{\large May '21 - Apr '22}	\\
+		\begin{itemize}
+			  
+			\item Applied advanced machine learning techniques for document extraction and object detection in engineering diagrams, improving process automation and accuracy.
+			\item Involved in developing safety monitoring systems in factory settings using machine vision to ensure compliance with social distancing protocols.
+        \end{itemize}		
+
+		\textbf{\large DATA ANALYST, Thoughtware Analytics }, \large Bangalore, India \hfill \textit{\large Jan '20 - May '21}	\\		
+		\begin{itemize}
+			  
+			\item Conducted demand forecasting and optimized inventory management for manufacturing and service-oriented businesses, focusing on cost-efficiency and supply chain improvements.
+			\item Developed and deployed computer vision algorithms for quality assurance in manufacturing processes, reducing material waste and increasing production quality.   
+        \end{itemize}	
+
+        \textbf{\large OPEN SOURCE CONTRIBUTIONS}
+        \begin{itemize}
+            \item Pytorch, Pytorch-lightning, Albumentations
+        \end{itemize}
+\end{flushleft}
+%		
+%		\vspace{-2mm}
+%		\centering\hrulefill
+%		\vspace{-2mm}
+	
+% Teaching Experience
+	
+%		
+%		
+%		\vspace{-2mm}
+%		\centering\hrulefill
+%		\vspace{-2mm}
+	
+
+% ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+% Skills
+       
+% \vspace{1.5mm}
+
+\begin{flushleft}
+    
+
+        {\Large \textbf{ACHIEVEMENTS}}
+        \vspace{1.5mm}
+        \begin{itemize}
+        \item \textbf{Winner}, Machine Learning Hackathon, Amrita College: Developed a standout computer vision solution, leading to a first-place finish.
+        \item \textbf{Top 10}, Financial Machine Learning Hackathon, TVS Finance: Excelled in predictive modeling for financial trends among numerous participants.
+        \item \textbf{Winner}, ML Architecture Hackathon, Fidelity Investments: Designed an AWS-based system for high-throughput machine learning, improving large-scale data processing capabilities and winning first place.
+        \end{itemize}
+\end{flushleft}
+
+	
+\end{document}
