@@ -27,8 +27,8 @@ jobs:
       # Install GitHub CLI for creating release
       - name: Install GitHub CLI
         run: |
-          sudo apt update
-          sudo apt install -y gh
+          apt update
+          apt install -y gh
 
       # Configure GitHub CLI
       - name: GitHub CLI configuration
