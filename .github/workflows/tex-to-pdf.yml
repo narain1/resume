@@ -1,0 +1,47 @@
+name: Compile LaTeX files and Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Setup a LaTeX environment using a Docker image
+      - name: Set up TeX Live
+        uses: docker://xuancheng/latex-action@latest
+
+      # Compile LaTeX files to PDFs
+      - name: Compile LaTeX documents
+        run: |
+          mkdir output
+          for file in *.tex; do
+            pdflatex -output-directory output "$file"
+          done
+
+      # Install GitHub CLI for creating release
+      - name: Install GitHub CLI
+        run: |
+          sudo apt update
+          sudo apt install -y gh
+
+      # Configure GitHub CLI
+      - name: GitHub CLI configuration
+        run: echo "GH_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Create a new release and upload the PDFs
+      - name: Create Release and Upload PDFs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG_NAME="release-$(date +'%Y%m%d%H%M%S')"
+          gh release create "$TAG_NAME" ./output/*.pdf --draft --title "Release $TAG_NAME" --notes "Automated release of compiled PDF documents"
