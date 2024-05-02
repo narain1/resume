@@ -8,17 +8,13 @@ on:
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
+    container:
+      image: narainp11/tex-action:latest
 
     steps:
       # Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v2
-
-      # Install TeX Live
-      - name: Install TeX Live
-        run: |
-          sudo apt update
-          sudo apt install -y texlive-full
 
       # Compile LaTeX files to PDFs
       - name: Compile LaTeX documents
