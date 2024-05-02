@@ -16,7 +16,7 @@ jobs:
 
       # Setup a LaTeX environment using a Docker image
       - name: Set up TeX Live
-        uses: docker://xuancheng/latex-action@latest
+        uses: xu-cheng/latex-action@v3
 
       # Compile LaTeX files to PDFs
       - name: Compile LaTeX documents
