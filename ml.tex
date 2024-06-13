@@ -16,9 +16,6 @@
 
 \def\hrulefill{\leavevmode\leaders\hrule height 1pt\hfill\kern 0pt}		% To change default thickness of \hrulefill
 
-%\usepackage{fontspec}
-%\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-%\setmainfont{Times}
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
 \setlist{nosep}												% To remove space between list items
@@ -34,7 +31,7 @@
 % Personal Details
 	\noindent
 	\begin{tabu} to \textwidth {X[l] X[c] X[r]}
-		  &  \multirow{2}{*}{{ \textbf{\Large Narain Pattabhiraman}}}  &  +1 (480) 942-7568 		\\
+		  &  \multirow{2}{*}{{ \textbf{\Large Narain Pattabhiraman}}}  &  (480) 942-7568 		\\
 		Tempe, AZ &	&   \textcolor{blue} {\href{mailto:npattab1@asu.edu}{npattab1@asu.edu}}	\\
 		% \multicolumn{3}{c}{\textcolor{blue}{\url {        https://www.linkedin.com/in/narainp}}}  \\
   %       \multicolumn{3}{c}{\textcolor{blue}{\url {        https://github.com/narain1}}} 
@@ -61,16 +58,14 @@
 
     % \textbf{\large Arizona State University}, \large United States \tab {\textit{\large GPA: 3.78}} \hfill \textit{\large Aug '23 - May '25*}	\\
     %     \hspace{0.5cm} \textit{\large M.S., Computer Engineering, Computer Systems}	\\
-	\textbf{\large Arizona State University}, \large United States \tab  \hfill \textit{\large Aug '23 - May '25*}	\\
-        \hspace{0.5cm} \textit{\large M.S, Computer Engineering, Computer Systems}	\\
+	\textbf{\large Arizona State University}, \textit{ M.S, Computer Engineering, Computer Systems}  \hfill \textit{ Aug '23 - May '25*}	\\
 		
 
 
-    % \vspace{1mm}
+    \vspace{1mm}
 
     
-    \textbf{\large Amrita Vishwa Vidyapeetham}, \large India \tab  \hfill \textit{\large Jul '16 - Jun '20}	\\
-        \hspace{0.5 cm}\textit{\large B.Tech., Mechanical Engineering}
+    \textbf{\large Amrita Vishwa Vidyapeetham}, \textit{\ B.Tech., Mechanical Engineering} \hfill \textit{ Jul '16 - Jun '20}	\\
 
 \end{flushleft}
 		
@@ -78,58 +73,65 @@
 		
 % Work Experience
 \begin{flushleft}
-      %	\rule{0.5cm}{1pt} 
-      {\Large \textbf{WORK EXPERIENCE}} %\hrulefill \\
-  
-        \vspace{1.5mm}
-        \textbf{\large MLOps \& AI Development Engr (Student Worker), ASU Enterprise Technology},  \large Phoenix, United States \hfill \textit{\large Jan '24}	\\
-        \begin{itemize}
-            \item Engineered and optimized Low-Latency Models (LLMs) and Retrieval Augmented Generation (RAG) systems to enhance deployment efficiency and computational performance.
-            \item Researched and Developed vector databases and data engineering pipelines for scalable data retrieval and question answering tools, utilizing ASU’s private documents to improve accessibility and support decision-making in administrative and academic functions.
-            \item Implemented robust, scalable solutions for machine learning model deployments and maintenance, reducing operational delays and improving system reliability and query precision.
-        \end{itemize}	
+	%	\rule{0.5cm}{1pt} 
+    {\Large \textbf{WORK EXPERIENCE}} %\hrulefill \\
 
-        \vspace{0.5mm}
-        \textbf{\large Software Engineer, Fidelity Investments},  \large Chennai, India \hfill \textit{\large Apr '22 - Jul '23}	\\
-        \begin{itemize}
-            \item Designed and implemented scalable deployment workflows for machine learning models on the AWS.  
-            \item Developed a low-latency feature store for online feature retrieval, achieving a 500x reduction in latency and substantially increasing throughput.
-            \item Crafted and executed deployment pipelines for Low-Latency Models on AWS EC2, utilizing quantized training methods to optimize performance and cost-efficiency. 
-        \end{itemize}	
-  
-        \textbf{\large AI Researcher, QPiAI }, \large Bangalore, India \hfill \textit{\large May '21 - Apr '22}	\\
-        \begin{itemize}
-            \item Applied advanced machine learning techniques for document extraction and object detection in engineering diagrams, improving process automation and accuracy.
-            \item Involved in developing safety monitoring systems in factory settings using machine vision to ensure compliance with social distancing protocols.
-        \end{itemize}		
+    \vspace{1.5mm}
+    \textbf{\large MLOps \& AI Development Engineer (Student), ASU Enterprise Technology},   Tempe, United States \hfill \textit{\large Jan '24}	\\
+    \begin{itemize}
+        % \item Engineered and optimized Low-Latency Models (LLMs) and Retrieval Augmented Generation (RAG) systems to enhance deployment efficiency and computational performance.
+        \item Researched and Developed vector databases and data engineering pipelines for scalable data retrieval and question answering tools, utilizing ASU’s documents to improve accessibility and support decision-making in administrative and academic functions.
+        \item developed an embedding model for academic and research documents using masked language modeling for fill-in-the-middle and next token prediction. The model utilizes SentencePiece embedding and the DeBERTa architecture to enhance semantic understanding of complex texts.
+    \end{itemize}	
+    \vspace{0.5mm}
+    \textbf{\large Software Engineer, Fidelity Investments},  Chennai, India \hfill \textit{\large Apr '22 - Jul '23}	\\
+    \begin{itemize}
+        \item Developed and implemented robust infrastructure and pipelines for the deployment of machine learning models on AWS.  
+         \item Engineered online feature stores to support real-time data and optimized batch inferencing to handle large-scale data efficiently.
+         \item Contributed to the deployment of diverse machine learning models, including document layout models, YOLO for real-time object detection, and large language models, further expanding the scope and impact of deployment solutions.
+         % \item Crafted and executed deployment pipelines for Low-Latency Models on AWS EC2, utilizing quantized training methods to optimize performance and cost-efficiency. 
+         \item Led the deployment and performance optimization of large language models, including BLOOM and Flan-T5, using tensor and model parallelism to accelerate token generation and enhance model performance.
+    \end{itemize}	
 
-        \textbf{\large DATA ANALYST, Thoughtware Analytics }, \large Bangalore, India \hfill \textit{\large Jan '20 - May '21}	\\		
-        \begin{itemize}
-            \item Conducted demand forecasting and optimized inventory management for manufacturing and service-oriented businesses, focusing on cost-efficiency and supply chain improvements.
-            \item Developed and deployed computer vision algorithms for quality assurance in manufacturing processes, reducing material waste and increasing production quality.   
-        \end{itemize}	
+    \textbf{\large AI Researcher, QPIAI Technologies },  Bangalore, India \hfill \textit{\large May '21 - Apr '22}	\\
+    \begin{itemize}
+          
+        \item Developed an AI-driven tool for extracting circuit diagrams as a graph of connected components from documents.
+        % \item Integrated additional metadata from documents with the extracted diagrams to enrich information on circuit elements, facilitating deeper insights and data utility.
+        \item Implemented a graph convolutional network (GCN) to train graph contrastive learning models for different circuit layouts, achieving high recall in identifying similarities between different circuit layouts.
+        \item Introduced a custom ranking algorithm for product recommendations supporting automated price estimation for sales personnel.
+        \item Involved in developing safety monitoring systems in warehouses using cameras to ensure compliance with social distancing.
+    \end{itemize}		
 
-        \textbf{\large OPEN SOURCE CONTRIBUTIONS}
-        \begin{itemize}
-            \item Pytorch, Pytorch-lightning, Albumentations
-        \end{itemize}
+    \textbf{\large DATA ANALYST, Thoughtware Analytics },  Bangalore, India \hfill \textit{\large Jan '20 - May '21}	\\		
+    \begin{itemize}
+          
+        \item Conducted demand forecasting for manufacturing and service-oriented businesses, focusing on supply chain improvements.
+        \item Designed and Executed computer vision algorithms for quality assurance in manufacturing processes, reducing material waste and increasing production quality.   
+    \end{itemize}
+    
+\end{flushleft}
+
+\begin{flushleft}
+    \textbf{\large OPEN SOURCE CONTRIBUTIONS}
+    \begin{itemize}
+        \item Pytorch, Pytorch-lightning, Albumentations, Kornia.
+    \end{itemize}
 \end{flushleft}
 
 
 
 \begin{flushleft}
 		%\rule{0.5cm}{1pt} 
-    {\Large \textbf {SKILLS AND CERTIFICATIONS}}
-
-    \vspace{1mm}
-    \begin{itemize}
-        \hspace{0.25cm} \large \textbf{Programming Languages:} Python, C++, C, SQL, UNIX, CUDA, Javascript,  \\
-        \hspace{0.25cm} \large \textbf{Machine Learning and Data Science:} MLOps, Predictive Modeling, Computer Vision, NLP   \\
-        \hspace{0.25cm} \large \textbf{Cloud Technologies and Tools:} AWS, Docker, DevOps, Git/GitHub, Jenkins  \\
-        % \hspace{0.5cm} \large \textbf{Relevant Coursework and Certifications:} Embedded Machine Learning, Digital Image Processing, Machine Learning Systems \\
+    {\large \textbf {SKILLS AND CERTIFICATIONS}}
     
-    \end{itemize}
-    % \textbf{Soft Skills:} Problem Solving, Critical Thinking, Communication, Teamwork and Leadership
+        \vspace{1mm}
+            \hspace{0.5cm}  \textbf{Programming Languages:} Python, C/C++, Javascript, bash, Jenkins, Spark, SQL, UNIX, CUDA. \\
+            \hspace{0.5cm}  \textbf{Machine Learning and Data Science:} MLOps, Predictive Modeling, Computer Vision, NLP, GenAI, LLMs, PyTorch, Airflow. \\
+            \hspace{0.5cm}  \textbf{Cloud Technologies and Tools:} AWS, Azure, Docker, DevOps, Git/GitHub, Terraform, CircleCI, Kubernetes, Docker, Kafka. \\
+            % \hspace{0.5cm}  \large \textbf{Relevant Coursework and Certifications:} Embedded Machine Learning, Digital Image Processing, Machine Learning Systems \\
+        
+        % \textbf{Soft Skills:} Problem Solving, Critical Thinking, Communication, Teamwork and Leadership
 
 \end{flushleft}
 
@@ -137,21 +139,45 @@
 \begin{flushleft}
         {\Large \textbf{ACHIEVEMENTS}}
         \vspace{1.5mm}
+            \begin{itemize}
+            \item \textbf{Winner 1st place}, Hackathon, Amrita College: Developed a standout solution to track drones, leading to a first-place finish.
+            \item \textbf{Top 10}, Finance Hackathon, TVS Finance: Excelled in predictive modeling for Credit Scoring among numerous participants.
+            \end{itemize}
+        
+        \vspace{1mm}
+        {\large \textbf{Publications}} \\
+        \vspace{0.5mm}
         \begin{itemize}
-        \item \large \textbf{Winner 1st place}, Machine Learning Hackathon, Amrita College: Developed a standout computer vision
-        solution to track drones, leading to a first-place finish.
-        \item \large \textbf{Top 10}, Financial Machine Learning Hackathon, TVS Finance: Excelled in predictive modeling for Credit Scoring among numerous participants.
+            \item \textbf{Benchmarking Large Language Model Inference} \hfill \textit{DISML conference 2024}
         \end{itemize}
 \end{flushleft}
 
 \begin{flushleft}
     {\Large \textbf{PROJECTS}}
-    \vspace{1.5mm}
+    \vspace{1mm}
     \item \textbf{\large Detection of hidden information from steganographic images}
+        \vspace{0.5mm}
         \begin{itemize}
-            \item \large Developed a CNN model based on ResNet with Efficient Channel Attention (ECA) and reduced convolutions stride to enhance detection of subtle steganographic signals in digital images.
-            \item \large Created a diverse dataset comprised of images with and without steganographic encoding by JMiPOD, JUNIWARD, and UERD, across different JPEG compression ratios, to train a robust classification model.
-            \item \large Engineered a 12-class detection system that effectively differentiates between various levels of JPEG compression and steganography types, significantly boosting the model’s accuracy and sensitivity.
+            \item Developed a CNN model based on ResNet with Channel Attention and reduced convolutions stride to enhance detection of subtle steganographic signals in digital images that effectively differentiates between various levels of JPEG compression.
+            \item Created a synthetic dataset comprised of images with and without steganographic encoding by JMiPOD, JUNIWARD, and UERD, across different JPEG compression ratios, to train a robust classification model.
+            % \item Engineered a 12-class detection system that effectively differentiates between various levels of JPEG compression and steganography types, significantly boosting the model’s accuracy and sensitivity.
+        \end{itemize}
+    \vspace{0.5mm}
+    \item \textbf{\large Cloud Architecture for Ticket Booking Platform}
+        \vspace{0.5mm}
+        \begin{itemize}
+            \item Developed the cloud architecture for a concert ticket booking website, focusing on scalability.
+            \item Utilized a suite of AWS services including Cognito for user authentication, EKS for container orchestration, Aurora and DynamoDB for database solutions, and Firewall Manager for enhanced security.
+            \item Engineered the system to handle peak loads efficiently, achieving response times less than 300 milliseconds during load testing.
+        \end{itemize}
+
+    \vspace{0.5mm}
+    \item \textbf{\large Privacy-Focused Browser-Based Language Model Application}
+        \vspace{0.5mm}
+        \begin{itemize}
+            \item Developed a cutting-edge web application enabling the execution of large language models directly in the browser using WebAssembly, enhancing user privacy by eliminating data transfer.
+            \item converted popular open-source language models, including Mistral, LLaMA, and GEMMA, into browser-compatible formats.
+            \item Designed the application to maintain strict user privacy standards, processing all requests locally without the need for installation.
         \end{itemize}
 
 \end{flushleft}
