@@ -14,10 +14,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Run the LaTeX compilation inside the Docker container
-      - name: Compile LaTeX in Docker
+      # Install TeX Live
+      - name: Install TeX Live
         run: |
-          docker run --rm -v $(pwd):/workspace narainp11/latex-compiler:latest bash -c "mkdir /workspace/output && for file in /workspace/*.tex; do pdflatex -output-directory /workspace/output \"$file\"; done"
+          sudo apt update
+          sudo apt install -y texlive-full
+
+      # Compile LaTeX files to PDFs
+      - name: Compile LaTeX documents
+        run: |
+          mkdir output
+          for file in *.tex; do
+            pdflatex -output-directory output "$file"
+          done
 
       # Install GitHub CLI for creating release
       - name: Install GitHub CLI
