@@ -43,7 +43,7 @@ jobs:
       # Create a new release and upload the PDFs
       - name: Create Release and Upload PDFs
         env:
-          tGITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG_NAME="release-$(date +'%Y%m%d%H%M%S')"
           gh release create "$TAG_NAME" ./output/*.pdf --title "Release $TAG_NAME" --notes "Automated release of compiled PDF documents" --draft
