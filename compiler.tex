@@ -1,0 +1,196 @@
+\documentclass[10pt,a4]{article}
+
+\usepackage[a4paper, portrait, margin=1cm]{geometry}	% To set Page Margin
+\usepackage{setspace}										% To use vspace
+\usepackage{tabu}											% To create personal details table
+\usepackage{multirow}										% To merge cells in table
+\usepackage{color}											% To change font color
+\usepackage{hyphenat}										% To remove hyphenation
+\usepackage[hidelinks]{hyperref}							% To insert hyperlink for mail ID
+\usepackage{textcomp}										% To display Celsius symbol 
+\usepackage{enumitem}										% To create list
+\usepackage{tabto}											% To use \tab
+\usepackage{gensymb}										% Degree symbol
+
+\renewcommand{\labelitemi}{\textendash}						% Change the bullet type
+
+\def\hrulefill{\leavevmode\leaders\hrule height 1pt\hfill\kern0pt}		% To change default thickness of \hrulefill
+
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\setlist{nosep}												% To remove space between list items
+
+
+
+\begin{document}
+{\fontfamily{ptm}\selectfont	
+	\renewcommand{\familydefault}{\sfdefault}
+	\pagenumbering{gobble}									% To remove page number
+
+% ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+% Personal Details
+	\noindent
+	\begin{tabu} to \textwidth {X[l] X[c] X[r]}
+		  &  \multirow{2}{*}{{\textbf{\Large Narain Pattabhiraman}}}  &   		\\
+		 &	&   \textcolor{blue} {\href{mailto:narain13579@gmail.com}{narain13579@gmail.com}}	\\
+		% \multicolumn{3}{c}{\textcolor{blue}{\url {        https://www.linkedin.com/in/narainp}}}  \\
+  %       \multicolumn{3}{c}{\textcolor{blue}{\url {        https://github.com/narain1}}} 
+	\end{tabu}
+
+    \hspace*{85pt} % Adds padding on the left side of the table
+    \begin{tabular}{@{}p{0.2\textwidth}@{\hspace{5pt}}p{0.2\textwidth}@{\hspace{5pt}}p{0.2\textwidth}@{}}
+        \raggedright\href{https://www.linkedin.com/in/narainp}{\textcolor{blue}{Linkedin}} &
+        \centering\href{https://github.com/narain1}{\textcolor{blue}{Github}} &
+        \raggedleft\href{https://narain1.netlify.app/}{\textcolor{blue}{Portfolio}}
+    \end{tabular}
+    \hspace*{50pt}
+	
+	%\centering	\\
+
+	\vspace{-2mm}
+
+	
+
+\vspace{1.5mm}
+\begin{flushleft}
+		%\rule{0.5cm}{1pt} 
+    {\Large \textbf {SKILLS AND CERTIFICATIONS}}
+    
+        \vspace{1mm}
+            \hspace{0.5cm}  \textbf{Programming Languages:} Python, C/C++, Spark, SQL, CUDA, Triton, LLVM. \\
+            \hspace{0.5cm}  \textbf{Machine Learning and Data Science:} MLOps, Computer Vision, NLP, GenAI, LLMs, A/B Testing. \\
+            \hspace{0.5cm}  \textbf{Cloud Technologies} AWS, Azure, Docker, DevOps, Git, Terraform, Jenkins, Kubernetes, Kafka. \\
+            \hspace{0.5cm}  \textbf{Frameworks and Tools:} REST API, Websocket, TensorFlow, PyTorch, AirFlow, ONNX, GDB. \\
+            % \hspace{0.5cm}  \textbf{Systems \& Architectures:} Distributed Systems, Embedded systems, GPU. \\
+            % \hspace{0.5cm}  \textbf{Relavent Cou:} Embeddings/LLM Alignment, Multimodal Embeddings, 3D Perception.
+
+            % \hspace{0.5cm} \textbf{Relevant Coursework and Certifications:} Embedded Machine Learning, Digital Image Processing, MLSYS, HPC. \\
+        
+        % \textbf{Soft Skills:} Problem Solving, Critical Thinking, Communication, Teamwork and Leadership
+
+\end{flushleft}
+		
+		
+% Work Experience
+\begin{flushleft}
+	%	\rule{0.5cm}{1pt} 
+    {\Large \textbf{WORK EXPERIENCE}} %\hrulefill \\
+
+    \vspace{1.5mm}
+    \hspace{1.5mm} \textbf{\large MLOps \& AI Development Engineer (Part Time), ASU Enterprise Technology},   Tempe, USA \hfill \textit{\large Dec '23}	\\
+    \begin{itemize}
+        \item Designed and optimized on-premise compute cluster infrastructure for efficient deep learning model inferencing.
+        \item Optimized \textbf{Computer Vision} and \textbf{ASR} models for edge devices, leveraging \textbf{CUDA/Arm Neon} and enabling real-time processing on resource-constrained devices.
+        \item Engineered the backend for \textbf{ASUGPT}, an AI assistant using multiple \textbf{LLMs}, supporting students and professors across ASU.
+        \item Implemented \textbf{Vector Databases} and \textbf{Data Pipelines} on \textbf{OpenSearch} for scalable Information retrieval.
+        \item Trained \textbf{Embedding Models} for Domain specific documents using \textbf{MLM Pretraining}, with  \textbf{DeBERTa} architecture.
+        \item Implemented a \textbf{Teacher-Student model} to propose candidate sequences for the large model to verify, achieving \textbf{2X-3X speedup}.  
+        \item Implemented serverless inference of machine learning models on lambda using GGML.
+    \end{itemize}	
+    
+    \vspace{0.5mm}
+    \hspace{1.5mm} \textbf{\large Software Engineer, Fidelity Investments},  Chennai, India \hfill \textit{\large Apr '22 $-$ Jul '23}	\\
+    \begin{itemize}
+        \item Developed and implemented robust \textbf{Infrastructure and Pipelines} for the deployment of \textbf{Machine Learning Models} on \textbf{AWS}.  
+         \item Engineered \textbf{Online Feature Stores} to support real-time data and optimized batch inferencing to handle large-scale data.
+         \item Contributed to the development and deployment of diverse machine learning models, including \textbf{Document Layout Models}.
+         % \item Crafted and executed deployment pipelines for Low-Latency Models on AWS EC2, utilizing quantized training methods to optimize performance and cost-efficiency. 
+         \item Led the deployment and performance optimization of \textbf{Large Language Models}, including \textbf{BLOOM} and \textbf{Flan-T5}, using \textbf{Tensor and Model Parallelism} to accelerate token generation and enhance model performance.
+        \item \textbf{Collaborated in deploying scalable machine learning workflows}, ensuring efficient model and data lifecycle management.
+    \end{itemize}	
+
+    \vspace{0.5mm}
+    \hspace{1.5mm} \textbf{\large AI Researcher, QPIAI Technologies},  Bangalore, India \hfill \textit{\large May '21 $-$ Apr '22}	\\
+    \begin{itemize}
+          
+        \item Developed an \textbf{AI-driven tool} for extracting circuit diagrams as a graph of connected components from documents.
+        % \item Integrated additional metadata from documents with the extracted diagrams to enrich information on circuit elements, facilitating deeper insights and data utility.
+        \item Implemented a \textbf{Graph Convolutional Network (GCN)} to train graph contrastive learning models for different circuit layouts, achieving high recall in identifying similarities between different circuit layouts.
+        \item Introduced a custom \textbf{Ranking Algorithms} for product recommendations supporting automated price estimation for sales.
+        \item Involved in developing \textbf{Safety Monitoring Systems} in warehouses using cameras to ensure compliance with social distancing.
+        \item \textbf{Developed an AutoML platform for ML models}, enabling automatic hyperparameter tuning and model selection.
+    \end{itemize}		
+
+    \vspace{0.5mm}
+    \hspace{1.5mm} \textbf{\large Data Analyst, Thoughtware Analytics},  Bangalore, India \hfill \textit{\large Jan '20 $-$ May '21}	\\		
+    \begin{itemize}
+          
+        \item Conducted \textbf{Demand Forecasting} for manufacturing and service-oriented businesses, focusing on \textbf{Supply Chain Improvements}.
+        \item Developed \textbf{Computer Vision} based for quality assurance in manufacturing processes, reducing material waste.  
+        \item \textbf{Conducted operational research to optimize logistics}, utilizing advanced algorithms to improve route planning and resource allocation, reducing costs and delivery times.
+    \end{itemize}
+
+    \vspace{1.0mm}
+    \hspace{1.5mm} \textbf{\large Open Source Contributions}
+    \begin{itemize}
+        \item \textbf{Pytorch, Pytorch-lightning, Albumentations, Kornia}.
+    \end{itemize}
+\end{flushleft}
+
+
+
+
+\vspace{0.5mm}
+\begin{flushleft}
+    {\Large \textbf{ACHIEVEMENTS AND PUBLICATIONS}}
+      \vspace{1.0mm}
+      \begin{itemize}
+            \item \textbf{Winner, 1st Place} – Hackathon, Amrita University: Developed an innovative solution for real-time drone tracking and planning.
+            \item \textbf{Top Finisher} – TVS Finance: Excelled in predictive modeling for credit scoring among 1000 participants worldwide.
+            \item \textbf{Large Language Model Inference Optimizations} \hfill \textit{DISML conference 2024}
+      \end{itemize}
+\end{flushleft}
+
+\begin{flushleft}
+    {\Large \textbf{PROJECTS}}
+    
+        % \item \textbf{\large Detection of hidden information from steganographic images}
+        % \begin{itemize}
+        %     \item Generated a comprehensive synthetic dataset consisting of images with and without steganographic encoding using three prominent algorithms $-$ JMiPOD, JUNIWARD, and UERD $-$ across various JPEG compression ratios.
+        %     \item Developed a \textbf{CNN} based on \textbf{ResNet} with \textbf{Channel Attention} and reduced convolutions stride to enhance detection of subtle steganographic signals in digital images that effectively differentiates between various levels of JPEG compression.
+            
+        %     % \item Engineered a 12-class detection system that effectively differentiates between various levels of JPEG compression and steganography types, significantly boosting the model’s accuracy and sensitivity.
+        % \end{itemize}
+    % \vspace{0.5mm}
+    % \hspace{1.5mm} \item \textbf{\large Cloud Architecture for Ticket Booking Platform}
+    %     \vspace{0.5mm}
+    %     \begin{itemize}
+    %         \item Developed the \textbf{cloud Architecture} for a concert ticket booking website, focusing on scalability.
+    %         \item Utilized a suite of \textbf{AWS services} including \textbf{Cognito} for user authentication, \textbf{EKS} for container orchestration, \textbf{Aurora} and \textbf{DynamoDB} for database solutions, and \textbf{Firewall Manager} for enhanced security.
+    %         \item Engineered the system to handle peak loads efficiently, achieving response times less than 300 milliseconds during load testing.
+    %     \end{itemize}
+
+        % \hspace{1.5mm} 
+        \item \hspace{1.5mm} \textbf{\large Compiler System for Deep Learning Graph Optimization and Op-Fusion}
+        \begin{itemize}
+            \item Engineered a compiler system targeting mobile backends with heterogeneous computer architecture.
+            \item Implemented a kernel mapping strategy leveraging \textbf{TVM} and \textbf{TASO}, enhancing performance.
+            \item Designed \textbf{high performant SIMD kernels} for \textbf{Edge Devices (ARM NEON)} for \textbf{Computer Vision algorithms}.
+            \item Developed \textbf{Custom CUDA kernels} for \textbf{Jetson Orin}, achieving speedups benchmarked against OpenCV C++ for \textbf{ARM Devices}.
+        \end{itemize}
+
+        \item \hspace{1.5mm} \textbf{\large High-Performance JIT Compilation for Python Using LLVM}
+        \begin{itemize}
+            \item Developed a \textbf{JIT compilation framework} for Python, leveraging \textbf{LLVM IR} to significantly optimize function execution.
+            \item Implemented multiple JIT strategies \textbf{AST, Bytecode, Tracing JIT}, transforming Python functions into optimized machine code.
+            \item Achieved up to \textbf{5000x speed improvements} by dynamically compiling and optimizing performance-critical functions.
+            \item Integrated \textbf{constant folding} and additional compiler optimizations to enhance runtime efficiency, benchmarking against \textbf{Numba}.
+        \end{itemize}
+
+`
+\end{flushleft}
+
+% Education
+\vspace{1.0mm}
+\begin{flushleft}
+	%	\rule{0.5 cm}{1pt}
+	{\Large \textbf{EDUCATION}} %\hrulefill	\\
+    
+    	\hspace{1.5mm} \textbf{\large Arizona State University}, \textit{M.S, Computer Engineering, Computer Systems}  \hfill \textit{Aug '23 $-$ May '25*}	\\
+        
+        \hspace{1.5mm} \textbf{\large Amrita Vishwa Vidyapeetham}, \textit{\ B.Tech., Mechanical Engineering} \hfill \textit{ Jul '16 - Jun '20}	\\
+
+\end{flushleft}
+}
+	
+\end{document}
