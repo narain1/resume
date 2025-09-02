@@ -1,6 +1,6 @@
 \documentclass[10pt,a4]{article}
 
-\usepackage[a4paper, portrait, margin=1cm]{geometry}	% To set Page Margin
+\usepackage[letterpaper, portrait, margin=1cm]{geometry}	% To set Page Margin
 \usepackage{setspace}										% To use vspace
 \usepackage{tabu}											% To create personal details table
 \usepackage{multirow}										% To merge cells in table
@@ -11,6 +11,7 @@
 \usepackage{enumitem}										% To create list
 \usepackage{tabto}											% To use \tab
 \usepackage{gensymb}										% Degree symbol
+\usepackage{xcolor}
 
 \renewcommand{\labelitemi}{\textendash}						% Change the bullet type
 
@@ -30,66 +31,106 @@
 % ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
 % Personal Details
 	\noindent
-	\begin{tabu} to \textwidth {X[l] X[c] X[r]}
-		  &  \multirow{2}{*}{{\textbf{\Large Narain Pattabhiraman}}}  &  (480) 942-7568 		\\
-		Tempe, AZ &	&   \textcolor{blue} {\href{mailto:narain13579@gmail.com}{narain13579@gmail.com}}	\\
-		% \multicolumn{3}{c}{\textcolor{blue}{\url {        https://www.linkedin.com/in/narainp}}}  \\
-  %       \multicolumn{3}{c}{\textcolor{blue}{\url {        https://github.com/narain1}}} 
+	\begin{tabu} to \textwidth {X[1] X[c] X[r]}
+		  &  \multirow{1}{*}{{\textbf{\Large Narain Pattabhiraman}}}  &   		\\
 	\end{tabu}
 
-    \hspace*{85pt} % Adds padding on the left side of the table
-    \begin{tabular}{@{}p{0.2\textwidth}@{\hspace{5pt}}p{0.2\textwidth}@{\hspace{5pt}}p{0.2\textwidth}@{}}
-        \raggedright\href{https://www.linkedin.com/in/narainp}{\textcolor{blue}{Linkedin}} &
-        \centering\href{https://github.com/narain1}{\textcolor{blue}{Github}} &
-        \raggedleft\href{https://narain1.netlify.app/}{\textcolor{blue}{Portfolio}}
-    \end{tabular}
-    \hspace*{50pt}
+    \vspace{-2mm}
+    % \begin{center}
+    % \begin{tabular} {p{0.25\textwidth} p{0.25\textwidth} p{0.20\textwidth} p{0.24\textwidth}}
+    %     \raggedright\href{https://wwww.linkedin.com/in/narainp}{\textcolor{blue}{www.linkedin.com/in/narainp}} & 
+    %     \href{https://github.com/narain1}{\textcolor{blue}{github.com/narain1}} & 
+    %     \href{https://narain1.netlify.app/}{\textcolor{blue}{narain1.netlify.app}} & 
+    %     \raggedright\href{mailto:narain13579@gmail.com}{\textcolor{blue}{narain13579@gmail.com}} 
+    % \end{tabular}
+    % \end{center}
+ 
+    % \hspace*{50pt}
 	
 	%\centering	\\
 
-	\vspace{-2mm}
+    \begin{center}
+    \begin{tabular} {p{0.25\textwidth} p{0.20\textwidth} p{0.20\textwidth} p{0.20\textwidth}}
+        \raggedright\href{https://wwww.linkedin.com/in/narainp}{\textcolor{blue}{Linkedin}} & 
+        \href{https://github.com/narain1}{\textcolor{blue}{Github}} & 
+        \href{https://narain1.netlify.app/}{\textcolor{blue}{Portfolio}} & 
+        \raggedright\href{mailto:narain13579@gmail.com}{\textcolor{blue}{narain13579@gmail.com}} 
+    \end{tabular}
+    \end{center}
+    
+    \vspace{-2mm}
+
 	
 % Education
+\vspace{0.25mm}
 \begin{flushleft}
 	%	\rule{0.5 cm}{1pt}
 	{\Large \textbf{EDUCATION}} %\hrulefill	\\
-		
-		\vspace{1mm}
-
-	\textbf{\large Arizona State University}, \textit{M.S, Computer Engineering, Computer Systems}  \hfill \textit{Aug '23 $-$ May '25*}	\\
-		
     
+    	\hspace{1.5mm} \textbf{\large Arizona State University}, \textit{M.S, Computer Engineering, Computer Systems}  \hfill \textit{Aug '23 $-$ May '25}	\\
+        
+        \hspace{1.5mm} \textbf{\large Amrita Vishwa Vidyapeetham}, \textit{\ B.Tech., Mechanical Engineering} \hfill \textit{ Jul '16 - Jun '20}	\\
+
+\end{flushleft}
+
+% \vspace{0.5mm}
+\begin{flushleft}
+		%\rule{0.5cm}{1pt} 
+    {\Large \textbf {SKILLS AND CERTIFICATIONS}}
+    
+        % \vspace{1mm}
+            \hspace{0.5cm}  \textbf{Programming Languages:} Python, C/C++, Spark, SQL, CUDA, Triton, LLVM. \\
+            \hspace{0.5cm}  \textbf{Machine Learning and Data Science:} MLOps, Computer Vision, NLP, GenAI, LLMs, Airflow, Sagemaker. \\
+            \hspace{0.5cm}  \textbf{Cloud Technologies} AWS, Azure, Docker, DevOps, Git, Terraform, Jenkins, Kubernetes, Kafka. \\
+            \hspace{0.5cm}  \textbf{Frameworks and Tools:} REST, Websocket, Pytorch, Clang, LLVM, GDB, VLLM, Autogen, Unsloth. \\
+            % \hspace{0.5cm}  \textbf{Systems \& Architectures:} Distributed Systems, Embedded systems, GPU. \\
+            % \hspace{0.5cm}  \textbf{Relavent Cou:} Embeddings/LLM Alignment, Multimodal Embeddings, 3D Perception.
+
+            % \hspace{0.5cm} \textbf{Relevant Coursework and Certifications:} Embedded Machine Learning, Digital Image Processing, MLSYS, HPC. \\
+        
+            % \textbf{Soft Skills:} Problem Solving, Critical Thinking, Communication, Teamwork and Leadership
 
 \end{flushleft}
 		
-		
+    % \vspace{-2mm}
 		
 % Work Experience
 \begin{flushleft}
 	%	\rule{0.5cm}{1pt} 
     {\Large \textbf{WORK EXPERIENCE}} %\hrulefill \\
 
-    \vspace{1.5mm}
-    \textbf{\large MLOps \& AI Development Engineer (Student), ASU Enterprise Technology},   Tempe, United States \hfill \textit{\large Jan '24}	\\
-    \begin{itemize}
-        % \item Engineered and optimized Low-Latency Models (LLMs) and Retrieval Augmented Generation (RAG) systems to enhance deployment efficiency and computational performance.
-        \item Engineered the backend for \textbf{ASUGPT}, an AI assistant using multiple \textbf{LLMs}, supporting students and professors across ASU.
-        \item Implemented \textbf{Vector Databases} and \textbf{Data Pipelines} on \textbf{OpenSearch} for scalable Information retrieval.
-        \item Trained \textbf{Embedding Models} for Domain specific documents using \textbf{MLM Pretraining}, with  \textbf{DeBERTa} architecture.
-        \item Implemented a \textbf{Teacher-Student model} to propose candidate sequences for the large model to verify, achieving \textbf{2X-3X speedup} by parallelizing token computation.
     
+
+    \vspace{1.5mm}
+    \hspace{1.5mm} \textbf{\large AI Engineer, \href{https://ai.asu.edu/ai-tools/ai-acceleration-team}{ASU Enterprise Technology}},   Tempe, USA \hfill \textit{\large Jan '24 $-$ Present}	\\
+    \begin{itemize}
+        % \item Optimized \textbf{Computer Vision} and \textbf{ASR} models on edge devices, leveraging \textbf{CUDA/Arm Neon} and for real-time processing.
+        \item \textbf{Built ML infrastructure} on ASU’s SOL Cluster using Kubernetes, enabling dynamic resource scaling for inference.
+        \item \textbf{Optimized infrastructure} to support a diverse suite of university research models, ensuring high availability and cost-efficiency.
+        \item Trained \textbf{Embedding Models} for Domain specific documents using \textbf{MLM Pretraining}, with  \textbf{DeBERTa} architecture.
+        % \item Engineered the backend for \textbf{ASUGPT}, an AI assistant using multiple \textbf{LLMs}, supporting students and professors across ASU.
+        \item Developed the backend for \textbf{ASUGPT}, an \textbf{LLM-powered} chat assistant featuring \textbf{multi-model support}, \textbf{rate monitoring}, \textbf{RAG}, \textbf{agentic evaluation} to prevent hallucinations and \textbf{semantic caching}.
+
+        % \item Implemented \textbf{Vector Databases} and \textbf{Data Pipelines} on \textbf{OpenSearch} for scalable Information retrieval.
+        % \item Implemented a \textbf{Teacher-Student model} to propose candidate sequences for the large model to verify, achieving \textbf{2X-3X speedup}.
+        \item Engineered a indexing system for \textbf{multimodal question answering}, integrating \textbf{text, video, image} representations for data retrieval.
+        \item Implemented \textbf{serverless inference of ML models} on AWS Lambda using \textbf{GGML}, significantly improving scalability and flexibility by enabling deployment of custom models at scale and at reduced cost compared to established model providers.
+
     \end{itemize}	
+    
     \vspace{0.5mm}
-    \textbf{\large Software Engineer, Fidelity Investments},  Chennai, India \hfill \textit{\large Apr '22 $-$ Jul '23}	\\
+    \hspace{1.5mm} \textbf{\large Software Engineer, Fidelity Investments},  Chennai, India \hfill \textit{\large Apr '22 $-$ Jul '23}	\\
     \begin{itemize}
         \item Developed and implemented robust \textbf{Infrastructure and Pipelines} for the deployment of \textbf{Machine Learning Models} on \textbf{AWS}.  
          \item Engineered \textbf{Online Feature Stores} to support real-time data and optimized batch inferencing to handle large-scale data.
-         \item Contributed to the deployment of diverse machine learning models, including \textbf{Document Layout Models}, \textbf{YOLO} for real-time object detection, and large language models, further expanding the scope and impact of deployment solutions.
-         \item Crafted and executed deployment pipelines for Low-Latency Models on AWS EC2, utilizing quantized training methods to optimize performance and cost-efficiency. 
-         \item Led the deployment and performance optimization of \textbf{large language models}, including \textbf{BLOOM} and \textbf{Flan-T5}, using \textbf{Tensor and Model Parallelism} to accelerate token generation and enhance model performance.
+         \item Contributed to the development and deployment of diverse machine learning models, including \textbf{Document Layout Models}.
+         % \item Crafted and executed deployment pipelines for Low-Latency Models on AWS EC2, utilizing quantized training methods to optimize performance and cost-efficiency. 
+         \item Led the deployment and performance optimization of \textbf{Large Language Models}, including \textbf{BLOOM} and \textbf{Flan-T5}, using \textbf{Tensor and Model Parallelism} to accelerate token generation and enhance model performance.
+        \item \textbf{Collaborated in deploying scalable machine learning workflows}, ensuring efficient model and data lifecycle management.
     \end{itemize}	
 
-    \textbf{\large AI Researcher, QPIAI Technologies },  Bangalore, India \hfill \textit{\large May '21 $-$ Apr '22}	\\
+    \vspace{0.5mm}
+    \hspace{1.5mm} \textbf{\large AI Researcher, QPIAI Technologies},  Bangalore, India \hfill \textit{\large May '21 $-$ Apr '22}	\\
     \begin{itemize}
           
         \item Developed an \textbf{AI-driven tool} for extracting circuit diagrams as a graph of connected components from documents.
@@ -97,19 +138,21 @@
         \item Implemented a \textbf{Graph Convolutional Network (GCN)} to train graph contrastive learning models for different circuit layouts, achieving high recall in identifying similarities between different circuit layouts.
         \item Introduced a custom \textbf{Ranking Algorithms} for product recommendations supporting automated price estimation for sales.
         \item Involved in developing \textbf{Safety Monitoring Systems} in warehouses using cameras to ensure compliance with social distancing.
+        \item \textbf{Developed an AutoML platform for ML models}, enabling automatic hyperparameter tuning and model selection.
+        \item Contributed to the hardware/software co-design process focusing on algorithmic optimizations to maximize inferencing throughput.
     \end{itemize}		
 
-    \textbf{\large DATA ANALYST, Thoughtware Analytics },  Bangalore, India \hfill \textit{\large Jan '20 $-$ May '21}	\\		
+    \vspace{0.5mm}
+    \hspace{1.5mm} \textbf{\large Data Analyst, Thoughtware Analytics},  Bangalore, India \hfill \textit{\large Jan '20 $-$ May '21}	\\		
     \begin{itemize}
           
         \item Conducted \textbf{Demand Forecasting} for manufacturing and service-oriented businesses, focusing on \textbf{Supply Chain Improvements}.
-        \item Developed \textbf{Computer Vision} based for quality assurance in manufacturing processes, reducing material waste and increasing production quality.   
+        \item Developed \textbf{Computer Vision} based for quality assurance in manufacturing processes, reducing material waste.  
+        \item \textbf{Conducted operational research to optimize logistics}, utilizing advanced algorithms to improve route planning and resource allocation, reducing costs and delivery times.
     \end{itemize}
-    
-\end{flushleft}
 
-\begin{flushleft}
-    \textbf{\large OPEN SOURCE CONTRIBUTIONS}
+    \vspace{1.0mm}
+    \hspace{1.5mm} \textbf{\large Open Source Contributions}
     \begin{itemize}
         \item \textbf{Pytorch, Pytorch-lightning, Albumentations, Kornia}.
     \end{itemize}
@@ -117,82 +160,67 @@
 
 
 
-\begin{flushleft}
-		%\rule{0.5cm}{1pt} 
-    {\large \textbf {SKILLS AND CERTIFICATIONS}}
-    
-        \vspace{1mm}
-            \hspace{0.5cm}  \textbf{Programming Languages:} Python, C/C++, Javascript, bash, Spark, SQL, UNIX, CUDA. \\
-            \hspace{0.5cm}  \textbf{Machine Learning and Data Science:} MLOps, Predictive Modeling, Computer Vision, NLP, GenAI, LLMs, PyTorch, Airflow. \\
-            \hspace{0.5cm}  \textbf{Cloud Technologies and Tools:} AWS, Azure, Docker, DevOps, Git/GitHub, Terraform, Jenkins, Kubernetes, Kafka. \\
-            % \hspace{0.5cm}  \large \textbf{Relevant Coursework and Certifications:} Embedded Machine Learning, Digital Image Processing, Machine Learning Systems \\
-        
-        % \textbf{Soft Skills:} Problem Solving, Critical Thinking, Communication, Teamwork and Leadership
-
-\end{flushleft}
-
 
 \begin{flushleft}
-        {\Large \textbf{ACHIEVEMENTS}}
-        \vspace{1.5mm}
-            \begin{itemize}
-            \item \textbf{Winner 1st place}, Hackathon, Amrita University: Developed a standout solution to track drones, leading to a first-place finish.
-            \item \textbf{Runner Up}, Finance Hackathon, TVS Finance: Excelled in predictive modeling for Credit Scoring among numerous participants.
-            \end{itemize}
-
-        
-        \vspace{1mm}
-        {\large \textbf{Publications}} \\
-        \vspace{0.5mm}
-        \begin{itemize}
-            \item \textbf{Benchmarking Large Language Model Inference} \hfill \textit{DISML conference 2024}
-        \end{itemize}
+    {\Large \textbf{ACHIEVEMENTS}}
+      % \vspace{1.0mm}
+      \begin{itemize}
+            \item \textbf{Winner, 1st Place} – Hackathon, Amrita University: Developed an innovative solution for real-time drone tracking and planning.
+            \item \textbf{Top Finisher} – TVS Finance: Excelled in predictive modeling for credit scoring among 1000 participants worldwide.
+            % \item \textbf{Large Language Model Inference Optimizations} \hfill \textit{DISML conference 2024}
+      \end{itemize}
 \end{flushleft}
 
 \begin{flushleft}
     {\Large \textbf{PROJECTS}}
-    \vspace{1mm}
-    \item \textbf{\large Detection of hidden information from steganographic images}
         \vspace{0.5mm}
-        \begin{itemize}
-            \item Generated a comprehensive synthetic dataset consisting of images with and without steganographic encoding using three prominent algorithms $-$ JMiPOD, JUNIWARD, and UERD $-$ across various JPEG compression ratios.
-            \item Developed a \textbf{CNN} based on \textbf{ResNet} with \textbf{Channel Attention} and reduced convolutions stride to enhance detection of subtle steganographic signals in digital images that effectively differentiates between various levels of JPEG compression.
+        % \item \hspace{1.5mm} \textbf{\large \href{https://huggingface.co/spaces/narainp/Deep-Steganalysis-detector}{{Detection of hidden information from steganographic images}}}
+        % \vspace{0.25mm}
+        % \begin{itemize}
+        %     \item Generated a comprehensive synthetic dataset consisting of images with and without steganographic encoding using three prominent algorithms $-$ JMiPOD, JUNIWARD, and UERD $-$ across various JPEG compression ratios.
+        %     \item Developed a \textbf{CNN} based on \textbf{ResNet} with \textbf{Channel Attention} and reduced convolutions stride to enhance detection of subtle steganographic signals in digital images that effectively differentiates between various levels of JPEG compression.
             
-            % \item Engineered a 12-class detection system that effectively differentiates between various levels of JPEG compression and steganography types, significantly boosting the model’s accuracy and sensitivity.
+        %     \item Engineered a 12-class detection system that effectively differentiates between various levels of JPEG compression and steganography types, significantly boosting the model’s accuracy and sensitivity.
+        % \end{itemize}
+        % \hspace{1.5mm} 
+        
+
+        % \item \hspace{1.5mm} \textbf{\large High-Performance JIT Compilation for Python Using LLVM}
+        % \begin{itemize}
+        %     \item Developed a \textbf{JIT compilation framework} for Python, leveraging \textbf{LLVM IR} to significantly optimize function execution.
+        %     \item Implemented multiple JIT strategies \textbf{AST, Bytecode, Tracing JIT}, transforming Python functions into optimized machine code.
+        %     \item Achieved up to \textbf{5000x speed improvements} by dynamically compiling and optimizing performance-critical functions.
+        %     \item Integrated \textbf{constant folding} and additional compiler optimizations to enhance runtime efficiency, benchmarking against \textbf{Numba}.
+        % \end{itemize}
+
+        % \item \hspace{1.5mm} \textbf{\large Thesis project: Robotic Arm Maneuvering Using Deep Reinforcement Learning (DRL)}
+        \item \hspace{1.5mm} \textbf{\large Robotic Arm Maneuvering Using Deep Reinforcement Learning}
+        % \vspace{0.2mm} \\
+        \hfill \textit{B.Tech Thesis Project, Amrita Vishwa Vidyapeetham}
+
+        \vspace{0.25mm}
+        \begin{itemize}
+            % \item Designed and implemented a simulation environment for a robotic arm in \textbf{Unity3D}, integrating \textbf{ML-Agents} toolkit for reinforcement learning research.
+            \item Designed and implemented a simulation environment for a robotic arm in \textbf{Unity3D} with the \textbf{Pytorch}, and fabricated a physical prototype using \textbf{3D-printed components} and \textbf{servo motors} for real-world experimentation.
+            \item Developed and trained agents using advanced RL algorithms: \textbf{DDPG}, \textbf{A2C}, and \textbf{PPO} for sample-efficient on-policy learning.
+            \item Engineered continuous control tasks with \textbf{($>$30 DoF)}, leveraging neural network policies to process raw sensor data and image.
+            % \item Automated reward, implemented \textbf{experience replay} and \textbf{Ornstein-Uhlenbeck noise} for robust exploration and stable training.
+            \item Demonstrated successful transfer of neural network control policies trained in simulation to the real-world robotic arm.
+            % \item Achieved target performance benchmarks, enabling the robotic arm to accurately follow moving targets and generalize control policies to novel environments.
         \end{itemize}
-
-    % \vspace{0.5mm}
-    % \item \textbf{\large Cloud Architecture for Ticket Booking Platform}
-    %     \vspace{0.5mm}
-    %     \begin{itemize}
-    %         \item Developed the \textbf{cloud Architecture} for a concert ticket booking website, focusing on scalability.
-    %         \item Utilized a suite of \textbf{AWS services} including \textbf{Cognito} for user authentication, \textbf{EKS} for container orchestration, \textbf{Aurora} and \textbf{DynamoDB} for database solutions, and \textbf{Firewall Manager} for enhanced security.
-    %         \item Engineered the system to handle peak loads efficiently, achieving response times less than 300 milliseconds during load testing.
-    %     \end{itemize}
-
-    \vspace{0.5mm}
-    \item \textbf{\large Compiler System for Deep Learning Graph Optimization and Op-Fusioncc}
-        \vspace{0.5mm}
+        \item \hspace{1.5mm} \textbf{\large Compiler System for Graph Optimization and Op-Fusion for Deep Learning}
+        \vspace{0.25mm}
         \begin{itemize}
             \item Engineered a compiler system targeting mobile backends with heterogeneous computer architecture.
             \item Implemented a kernel mapping strategy leveraging \textbf{TVM} and \textbf{TASO}, enhancing performance.
-            \item Designed high performant \textbf{SIMD kernels} for \textbf{Edge Devices (ARM NEON)} for \textbf{Computer Vision algorithms}.
+            \item Designed \textbf{high performant SIMD kernels} for \textbf{Edge Devices (ARM NEON)} for \textbf{Computer Vision algorithms}.
             \item Developed \textbf{Custom CUDA kernels} for \textbf{Jetson Orin}, achieving speedups benchmarked against OpenCV C++ for \textbf{ARM Devices}.
         \end{itemize}
 
-    \vspace{0.5mm}
-    \item \textbf{\large \href{https://github.com/narain1/roberta.c}{Neural Network inference engine using Low level operations}}
-        \vspace{0.5mm}
-        \begin{itemize}
-            \item Developed a C-based implementation of the RoBERTa model for efficient \textbf{Serverless Inference} on \textbf{AWS Lambda} CPU.
-            \item Implemented an extensible \textbf{Tensor Library} in C and CUDA for high-performance computations.
-            \item Utilized advanced CPU instructions like \textbf{AVX}, \textbf{AMX}, and multithreading to optimize performance.
-            % \item Optimized the transformer architecture for performance on CPU-based inference.
-            % \item Focused on memory management and reducing computational overhead.
-        \end{itemize}
-        
 
 \end{flushleft}
+
+
 }
 	
 \end{document}
