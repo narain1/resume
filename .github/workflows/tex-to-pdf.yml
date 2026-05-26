@@ -4,46 +4,47 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - Dockerfile
+      - .github/workflows/build-docker.yml
+  workflow_dispatch:
 
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/${{ github.repository_owner }}/tex-action:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    permissions:
+      contents: write
+      packages: read
 
     steps:
-      # Checkout the repository
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      # Install TeX Live
-      - name: Install TeX Live
-        run: |
-          sudo apt update
-          sudo apt install -y texlive-full
-
-      # Compile LaTeX files to PDFs
       - name: Compile LaTeX documents
         run: |
-          mkdir output
+          mkdir -p output
           for file in *.tex; do
             pdflatex -output-directory output "$file"
           done
 
-      # Install GitHub CLI for creating release
-      - name: Install GitHub CLI
+      - name: Convert LaTeX to DOCX
         run: |
-          sudo apt update
-          sudo apt install -y gh
+          for file in *.tex; do
+            name="${file%.tex}"
+            pandoc "$file" -o "output/${name}.docx"
+          done
 
-      # Configure GitHub CLI
-      - name: GitHub CLI configuration
-        run: echo "GH_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # Create a new release and upload the PDFs
-      - name: Create Release and Upload PDFs
+      - name: Create Release and Upload Artifacts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG_NAME="release-$(date +'%Y%m%d%H%M%S')"
-          gh release create "$TAG_NAME" ./output/*.pdf --title "Release $TAG_NAME" --notes "Automated release of compiled PDF documents" --draft
+          gh release create "$TAG_NAME" ./output/*.pdf ./output/*.docx \
+            --title "Release $TAG_NAME" \
+            --notes "Automated release of compiled PDF and DOCX documents" \
+            --draft
