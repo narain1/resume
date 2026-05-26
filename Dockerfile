@@ -4,10 +4,11 @@ FROM ubuntu:latest
 # Set environment variables to avoid interactive prompts during package installations
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install required dependencies: TeX Live, Pandoc, and GitHub CLI
+# Install required dependencies: TeX Live, Pandoc, LibreOffice (for PDF->DOCX), and GitHub CLI
 RUN apt-get update && apt-get install -y \
     texlive-full \
     pandoc \
+    libreoffice \
     gh \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
