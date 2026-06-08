@@ -32,11 +32,11 @@ jobs:
             pdflatex -output-directory output "$file"
           done
 
-      - name: Convert LaTeX to DOCX
+      - name: Convert PDF to DOCX
         run: |
-          for file in *.tex; do
-            name="${file%.tex}"
-            pandoc "$file" -o "output/${name}.docx"
+          cd output
+          for pdf in *.pdf; do
+            soffice --headless --infilter='writer_pdf_import' --convert-to docx "$pdf"
           done
 
       - name: Create Release and Upload Artifacts
