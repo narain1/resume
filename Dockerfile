@@ -4,6 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
     ca-certificates \
+    git \
     gh \
     libreoffice-core \
     libreoffice-writer \
@@ -14,6 +15,7 @@ RUN apt-get update && apt-get install -y \
 RUN command -v pdflatex \
     && command -v soffice \
     && command -v pandoc \
+    && command -v git \
     && command -v gh \
     && soffice --headless --version
 
