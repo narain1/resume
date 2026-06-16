@@ -26,18 +26,25 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Compile LaTeX documents
+        shell: bash
         run: |
+          set -euo pipefail
+          command -v pdflatex
           mkdir -p output
           for file in *.tex; do
-            pdflatex -output-directory output "$file"
+            pdflatex -interaction=nonstopmode -halt-on-error -output-directory output "$file"
           done
 
       - name: Convert PDF to DOCX
+        shell: bash
         run: |
+          set -euo pipefail
+          command -v soffice
           cd output
           for pdf in *.pdf; do
-            soffice --headless --infilter='writer_pdf_import' --convert-to docx "$pdf"
+            soffice --headless --infilter='writer_pdf_import' --convert-to docx --outdir . "$pdf"
           done
+          ls -lh ./*.pdf ./*.docx
 
       - name: Create Release and Upload Artifacts
         env:

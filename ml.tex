@@ -19,6 +19,7 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
+\linespread{0.96}
 \setlist{nosep}												% To remove space between list items
 
 
@@ -35,7 +36,12 @@
 		  &  \multirow{1}{*}{{\textbf{\Large Narain Pattabhiraman}}}  &   		\\
 	\end{tabu}
 
-    \vspace{-2mm}
+    \vspace{-1mm}
+    \begin{center}\small
+        \textbf{AI/ML Infrastructure Engineer $|$ LLM Serving, Agentic Systems, GPU Inference, MLOps}
+    \end{center}
+
+    \vspace{-3mm}
     % \begin{center}
     % \begin{tabular} {p{0.25\textwidth} p{0.25\textwidth} p{0.20\textwidth} p{0.24\textwidth}}
     %     \raggedright\href{https://wwww.linkedin.com/in/narainp}{\textcolor{blue}{www.linkedin.com/in/narainp}} &
@@ -68,7 +74,7 @@
 	{\Large \textbf{EDUCATION}} %\hrulefill	\\
 
     	\hspace{1.5mm} \textbf{\large Arizona State University}, \textit{M.S, Computer Engineering, Computer Systems}  \hfill \textit{Aug '23 $-$ May '25}	\\
-        \hspace{1.5mm} \textit{Relevant Coursework:} Data-Intensive ML Systems, Embedded ML, Medical Image Analysis, HPC. \\
+        % \hspace{1.5mm} \textit{Relevant Coursework:} Data-Intensive ML Systems, Embedded ML, Medical Image Analysis, HPC. \\
 
         \hspace{1.5mm} \textbf{\large Amrita Vishwa Vidyapeetham}, \textit{\ B.Tech., Mechanical Engineering} \hfill \textit{ Jul '16 - Jun '20}	\\
 
@@ -80,10 +86,10 @@
     {\Large \textbf {SKILLS AND CERTIFICATIONS}}
 
         % \vspace{1mm}
-            \hspace{0.5cm}  \textbf{Programming Languages:} Python, C/C++, SQL, CUDA. \\
-            \hspace{0.5cm}  \textbf{Machine Learning:} MLOps, Computer Vision, NLP, Model Optimization, A/B Testing, Pytorch, VLLM, Unsloth, Sagemaker. \\
-            \hspace{0.5cm}  \textbf{Agentic AI:} Agent Orchestration, DAG Workflows, Function Calling, Multi-step Reasoning, RAG, Vector Databases, Agentic Evaluation. \\
-            \hspace{0.5cm}  \textbf{Cloud Technologies:} AWS, GCP, Azure, Docker, Git, Kubernetes. \\
+            \hspace{0.5cm}  \textbf{Programming \& Systems:} Python, C/C++, CUDA, Triton, SQL, Kubernetes, Terraform, Docker. \\
+            \hspace{0.5cm}  \textbf{LLM Systems:} vLLM, SGLang, GGML, DeepSpeed, LoRA, SFT, GRPO/RLHF, RAG. \\
+            \hspace{0.5cm}  \textbf{Agentic AI \& Evals:} ReAct, MCP, Composio, DAG Workflows, Tool Use, Langfuse, lm-eval-harness, Agentic Evaluation. \\
+            \hspace{0.5cm}  \textbf{ML \& Cloud:} PyTorch, Computer Vision, NLP, Model Optimization, A/B Testing, AWS, GCP, Azure, OpenSearch, MLflow. \\
             % \hspace{0.5cm}  \textbf{Systems \& Architectures:} Distributed Systems, Embedded systems, GPU. \\
             % \hspace{0.5cm}  \textbf{Relavent Cou:} Embeddings/LLM Alignment, Multimodal Embeddings, 3D Perception.
 
@@ -103,11 +109,11 @@
     \vspace{1.5mm}
     \hspace{1.5mm} \textbf{\large MLOps Engineer, ASU Enterprise Technology},   Tempe, USA \hfill \textit{\large Jan '24 $-$ Present}	\\
     \begin{itemize}
-        \item Built \textbf{CreateAI}, an agentic LLM platform serving \textbf{30K MAU} and \textbf{30B+ tokens/month} across managed providers (\textbf{Vertex AI}, AWS Bedrock) and closed-source LLM APIs; shipped multi-model routing, \textbf{RAG}, semantic caching, and agentic hallucination defense.
-        \item Engineered a dynamic \textbf{agentic DAG workflow engine} powering \textbf{$\sim$50K jobs/month} (code execution, code development, research analysis) with heterogeneous LLM/tool composition and adaptive routing.
+        \item Built \textbf{CreateAI}, an agentic LLM platform serving \textbf{30K MAU} and \textbf{30B+ tokens/month} across \textbf{100+ provider/in-house models} with multi-model routing, custom \textbf{RAG}, semantic caching, and hallucination defense.
+        \item Architected \textbf{Agentic Workflows}, upgrading query Lambda/DAG workflows to a \textbf{ReAct agent runtime} powering \textbf{$\sim$100K jobs/month} with tool execution, \textbf{MCP}/Composio, multi-agent handoffs, sandboxed code execution, asset handling, and agentic history.
         \item Built LLM serving infrastructure on ASU's \textbf{SOL Cluster with Kubernetes}, enabling dynamic GPU resource scaling for multi-tenant inference workloads.
         \item Deployed \textbf{serverless LLM inference on AWS Lambda using GGML}, reducing inference cost by \textbf{60\% vs AWS Bedrock} while enabling custom-model deployment at scale.
-        \item Trained domain-specific \textbf{embedding models} via MLM pretraining on \textbf{DeBERTa}, indexed on \textbf{OpenSearch} for RAG; extended to a \textbf{multimodal indexing system} for text, video, and image QA.
+        \item Trained domain-specific \textbf{embedding models} via MLM pretraining on \textbf{DeBERTa}/\textbf{OpenSearch}; extended RAG to a \textbf{serverless multimodal indexing system} for text/video/image QA, processing typical files in $\sim$15s avg with robust DOCX/PDF extraction edge cases.
     \end{itemize}
 
     \vspace{0.5mm}
@@ -122,9 +128,9 @@
     \vspace{0.5mm}
     \hspace{1.5mm} \textbf{\large AI Researcher, QPIAI Technologies},  Bangalore, India \hfill \textit{\large May '21 $-$ Apr '22}	\\
     \begin{itemize}
-        \item Led \textbf{hardware/software co-design} of algorithmic optimizations to maximize inferencing throughput on target accelerators.
-        \item Built a \textbf{Graph Convolutional Network} with contrastive learning for circuit-layout similarity matching, achieving high recall across heterogeneous layouts.
-        \item Designed an \textbf{AI-driven extraction tool} that parsed engineering documents into graph representations of circuit components for downstream retrieval.
+        \item Built a scalable \textbf{CV/NLP inference platform} across multiple machines with queue-based scheduling, dynamic batching, online inference, and batch jobs for edge and server workloads.
+        \item Led \textbf{hardware/software co-design} and multi-GPU training/inference optimizations to maximize throughput on target accelerators.
+        \item Built a \textbf{Graph Convolutional Network} for circuit-layout similarity matching and an \textbf{AI-driven extraction tool} that parsed engineering documents into graph representations for downstream retrieval.
     \end{itemize}
 
     \vspace{0.5mm}
@@ -136,11 +142,19 @@
     \vspace{1.0mm}
     \hspace{1.5mm} \textbf{\large Open Source Contributions}
     \begin{itemize}
-        \item \textbf{PyTorch} (backward fns for select layers), \textbf{Kornia} (GPU image decoding), \textbf{SGLang} (LLM inference config cookbook), \textbf{vLLM} (LoRA support on Apple \textbf{MLX} runtime).
+        \item Contributed to \textbf{PyTorch} autograd kernels, \textbf{Kornia} GPU image decoding, \textbf{SGLang} inference configuration docs, and \textbf{vLLM} LoRA support for Apple \textbf{MLX} runtime.
     \end{itemize}
 \end{flushleft}
 
 
+\vspace{0.5mm}
+\begin{flushleft}
+    {\Large \textbf{PUBLICATIONS}}
+    \vspace{0.5mm}
+    \begin{itemize}
+        \item \textbf{Large Language Model Inference Optimizations} \hfill \textit{DISML 2024}
+    \end{itemize}
+\end{flushleft}
 
 
 \begin{flushleft}
