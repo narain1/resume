@@ -1,26 +1,22 @@
-# Start from the latest Ubuntu image
-FROM ubuntu:latest
+FROM ubuntu:24.04
 
-# Set environment variables to avoid interactive prompts during package installations
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install required dependencies: TeX Live, Pandoc, LibreOffice (for PDF->DOCX), and GitHub CLI
 RUN apt-get update && apt-get install -y \
-    texlive-full \
-    pandoc \
-    libreoffice \
+    ca-certificates \
     gh \
+    libreoffice-core \
+    libreoffice-writer \
+    pandoc \
+    texlive-full \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Create a directory for the LaTeX files
-RUN mkdir /workspace
+RUN command -v pdflatex \
+    && command -v soffice \
+    && command -v pandoc \
+    && command -v gh \
+    && soffice --headless --version
 
-# Set the working directory to the new directory
 WORKDIR /workspace
 
-# Copy the LaTeX files to the container
-COPY . /workspace
-
-# Default command to run when the container starts (can be overridden)
 CMD ["bash"]
-
