@@ -47,11 +47,16 @@ jobs:
           ls -lh ./*.pdf ./*.docx
 
       - name: Create Release and Upload Artifacts
+        shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
+          command -v git
+          command -v gh
           TAG_NAME="release-$(date +'%Y%m%d%H%M%S')"
           gh release create "$TAG_NAME" ./output/*.pdf ./output/*.docx \
+            --repo "$GITHUB_REPOSITORY" \
             --title "Release $TAG_NAME" \
             --notes "Automated release of compiled PDF and DOCX documents" \
             --draft
